@@ -9,14 +9,14 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Help Me Bring My Family Back Together">
   <meta property="og:description" content="Support a father trying to reunite his family.">
-  <meta property="og:image" content="p.jpg">
+  <meta property="og:image" content="pp.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Help Me Bring My Family Back Together">
   <meta name="twitter:description" content="Support a father trying to reunite his family.">
-  <meta name="twitter:image" content="p.jpg">
+  <meta name="twitter:image" content="pp.png">
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -25,68 +25,41 @@
       margin: 0;
       font-family: 'Inter', system-ui, sans-serif;
       background: #000;
+      color: #fff;
     }
 
-    .image-container {
-      position: relative;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .image-container img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    /* OVERLAY */
-    .overlay {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      padding-top: 30px;
-      background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.65),
-        rgba(0,0,0,0.05),
-        rgba(0,0,0,0)
-      );
+    .top {
       text-align: center;
+      padding: 25px 15px 10px;
     }
 
     .title {
-      color: #fff;
       font-size: 34px;
       font-weight: 700;
-      padding: 14px 26px;
-      border-radius: 14px;
-      background: rgba(0,0,0,0.45);
       margin-bottom: 18px;
     }
 
-    /* 🔥 DONATION CALL */
+    /* 🔥 DONATION BUTTON */
     .donate-call {
       font-size: 22px;
       font-weight: 800;
-      color: red;
+      margin: 18px 0;
       animation: pulse 1.2s infinite;
     }
 
     .donate-call a {
       color: red;
       text-decoration: none;
-      background: rgba(0,0,0,0.55);
-      padding: 10px 22px;
+      border: 2px solid red;
+      padding: 12px 26px;
       border-radius: 999px;
+      display: inline-block;
     }
 
     .arrow {
-      display: inline-block;
       margin-left: 8px;
       animation: arrowBlink 1s infinite;
+      display: inline-block;
     }
 
     @keyframes pulse {
@@ -100,25 +73,56 @@
       50% { transform: translateX(6px); }
       100% { transform: translateX(0); }
     }
+
+    .image-wrapper {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .image-wrapper img {
+      width: 100%;
+      height: auto;
+      display: block;
+      cursor: pointer;
+    }
+
+    .bottom {
+      text-align: center;
+      padding: 25px 15px 40px;
+    }
   </style>
 </head>
 
 <body>
 
-  <div class="image-container">
-    <img src="p.jpg" alt="My Story">
+  <!-- TOP SECTION -->
+  <div class="top">
+    <div class="title">
+      Help Me Bring My Family Back Together
+    </div>
 
-    <div class="overlay">
-      <div class="title">
-        Help Me Bring My Family Back Together
-      </div>
+    <div class="donate-call">
+      <a href="https://gofund.me/3752273aa" target="_blank">
+        DONATE & SEE MORE DETAILS
+        <span class="arrow">➤➤➤</span>
+      </a>
+    </div>
+  </div>
 
-      <div class="donate-call">
-        <a href="https://gofund.me/3752273aa" target="_blank">
-          DONATE & SEE MORE DETAILS
-          <span class="arrow">➤➤➤</span>
-        </a>
-      </div>
+  <!-- IMAGE (CLICKABLE) -->
+  <div class="image-wrapper">
+    <a href="https://gofund.me/3752273aa" target="_blank">
+      <img src="pp.png" alt="My Story Image">
+    </a>
+  </div>
+
+  <!-- BOTTOM DONATION -->
+  <div class="bottom">
+    <div class="donate-call">
+      <a href="https://gofund.me/3752273aa" target="_blank">
+        DONATE & SEE MORE DETAILS
+        <span class="arrow">➤➤➤</span>
+      </a>
     </div>
   </div>
 
